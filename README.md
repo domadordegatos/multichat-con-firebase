@@ -9,7 +9,8 @@ Sencilla app desarrollada con Ionic y angular, para conectar multiples usuarios 
 
 # Funcionalidades!
 
-  - Crear y Elimianr chats
+  - Crear y Elimianr chats guardados en firebase
+  - Carga de mensajes desde firebase
   - Envio de textos
   - Login con Firebase
   - Carga de informacion de usuarios
