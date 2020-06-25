@@ -1,20 +1,22 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
+<ion-header [translucent]="true" mode="ios">
+  <ion-toolbar color="tertiary">
     <ion-title>
-      Blank
+      Chat List N.N
     </ion-title>
+      <ion-icon (click)="logOut();" color="" style="margin-right: 1rem;" size="large" slot="end" name="log-in-sharp"></ion-icon>
   </ion-toolbar>
 </ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+ 
+<ion-content [fullscreen]="true" mode="ios">
+  <ion-list>
+    <ion-item *ngFor="let item of chatRooms" detail (click)="openchat(item)">
+      <ion-avatar slot="start">
+        <img [src]="item.img" />
+      </ion-avatar>
+      <ion-label>
+        <h3><b> {{item.name}}</b></h3>
+        <p>{{item.description}} </p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>

@@ -1,0 +1,28 @@
+<ion-header mode="ios">
+  <ion-toolbar color="primary">
+    <ion-title>Login in My App</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content mode="ios">
+  <div class="ion-text-center" style="margin-top: 1rem;">
+    <img src="https://img.pngio.com/chat-png-icon-free-download-searchpngcom-chat-png-1253_1152.png" width="50%" alt="">
+  </div>
+  <ion-item>
+    <ion-label position="floating">Email</ion-label>
+    <ion-input type="text" [(ngModel)]="email" name="email" placeholder="Correo@mail.com"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Pasword</ion-label>
+    <ion-input type="password" [(ngModel)]="password" name="password" placeholder="*************"></ion-input>
+  </ion-item>
+  <ion-button (click)="login()" color="primary" expand="full" shape="round">
+    Login 
+    <ion-icon size="large" name="people-circle"></ion-icon>
+  </ion-button>
+  <ion-button style="margin-top: 2rem;" [routerLink]="[ '/register']"color="warning" expand="full" shape="round">
+    Crear Cuenta
+    <ion-icon size="large" name="people-circle"></ion-icon>
+  </ion-button>
+  
+</ion-content>
